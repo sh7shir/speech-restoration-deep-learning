@@ -2,9 +2,9 @@
 # A Comparative Study of Diffusion-Based vs Inception-Based Neural Speech Decoders
 
 This repository contains code for comparing different neural architectures (DiffusionUNet, inceptDecoder, FCN, and CNN) to reconstruct speech from EEG signals. The study evaluates performance using spectro-temporal metrics like Pearson correlation and STGI (Spectro-Temporal Glimpsing Index).
-
-## Project Structure
 ```
+## Project Structure
+
 .
 ├── main.py              # Entry point for feature extraction, reconstruction, and visualization
 ├── README.md
