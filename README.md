@@ -32,10 +32,6 @@ This repository contains code for comparing different neural architectures (Diff
 
 3. **Dataset Setup**:
    - Download the `SingleWordProductionDutch-iBIDS` dataset and place it in the project root.
-   - Create required directories:
-     ```bash
-     mkdir -p features results Reconstructed Images
-     ```
 
 ## Configuration
 Modify `src/config.py` to adjust:
