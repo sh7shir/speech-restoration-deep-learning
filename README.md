@@ -5,7 +5,6 @@ This repository contains code for comparing different neural architectures (Diff
 ```
 ## Project Structure
 
-.
 ├── main.py              # Entry point for feature extraction, reconstruction, and visualization
 ├── README.md
 └── src/
@@ -16,7 +15,6 @@ This repository contains code for comparing different neural architectures (Diff
     ├── models.py              # Defines neural architectures (DiffusionUNet, inceptDecoder, etc.)
     ├── reconstructWave.py     # Griffin-Lim algorithm for waveform reconstruction
     └── vis.py                 # Generates plots for results (spectrograms, correlations)
-```
 
 ## Installation
 1. **Clone the repository**:
