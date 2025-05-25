@@ -1,8 +1,5 @@
 # A Comparative Study of Diffusion-Based vs Inception-Based Neural Speech Decoders
 
-![Example Spectrograms](Images/DiffusionUNetspectrogram_comparison.png)  
-*Example reconstructed spectrograms from different models.*
-
 ## Description
 This project compares neural architectures for reconstructing speech from intracranial EEG (iEEG) data. It implements and evaluates four models:  
 - **DiffusionUNet**: A U-Net with dilated convolutions and diffusion-based denoising.  
@@ -23,3 +20,43 @@ The pipeline includes feature extraction from EEG/audio, model training, spectro
 Install packages:  
 ```bash
 pip install -r requirements.txt
+
+
+project_root/
+├── SingleWordProductionDutch-iBIDS/
+│   ├── sub-01/  
+│   │   └── ieeg/  
+│   │       └── sub-01_task-wordProduction_ieeg.nwb  
+│   ├── ...  
+│   └── participants.tsv  
+├── src/  
+├── ...
+
+Usage
+1. Configuration
+Modify config.py to:
+
+Set modelName to one of: DiffusionUNet, inceptDecoder, CNN, FCN.
+
+Adjust hyperparameters (epochs, batch size, etc.).
+
+2. Feature Extraction
+Run to extract Mel spectrograms and EEG features:
+
+bash
+python main.py
+Note: Set extract_features = True in config.py for this step.
+
+3. Model Training & Reconstruction
+Set construct = True in config.py, then run:
+
+bash
+python main.py
+Reconstructed spectrograms and evaluation metrics will be saved in results/.
+
+4. Visualization
+Set visualization = True in config.py, then run:
+
+bash
+python main.py
+Plots for correlation, STGI, and spectrograms will be saved in Images/.
